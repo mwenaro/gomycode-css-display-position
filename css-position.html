@@ -4,9 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <style>
-      
+      .container {
+        height: 150vh;
+        position: relative;
+      }
+      /* 
+        - static
+        - fixed
+        - sticky
+        - relative
+        - absolute
+
+      */
+
+      /* relative, absolute, fixed */
+
+      #box3 {
+        position: relative;
+        left: 50px;
+        top: 10px;
+        background-color: red;
+      }
+      #box4 {
+        background-color: purple;
+        position: absolute;
+        right: 5px;
+        top: 100px;
+        z-index: 1;
+      }
+
+      #box5 {
+        background-color: green;
+        position: fixed;
+        top:0;
+        width: 500px;
+        z-index: 2;
+
+      }
+
+      #box2{
+        background-color: yellow;
+        position: sticky;
+        top:100px;
+      }
     </style>
   </head>
   <body>
