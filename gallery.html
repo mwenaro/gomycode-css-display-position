@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --fontSize:16px;
+      --bgPrimary: teal;
+      --primaryColor: white;
+      --containerPadding: 5px;
+
+      font-size: var(--fontSize);
+      background-color: #5e5e5e;
+      color: #000;
+    }
+    nav a {
+      text-decoration: none;
+    }
+    nav li {
+      list-style: none;
+    }
+    /* xs => extra small devices */
+
+    .wrapper {
+      /* padding: var(--containerPadding); */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    width: 100%;
+    }
+    header,
+    footer {
+      background-color: var(--bgPrimary);
+      color: white;
+      width: 100%;
+      
+      min-height: 100px;
+    }
+
+    header {
+      margin-bottom: 1rem;
+      height: fit-content;
+    }
+
+    header h1{
+        color: #00f;
+        font-size: 2.5rem;
+        font-weight: 900;
+        padding: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    header p{
+        font-size: 1.2rem;
+        font-style: italic;
+        padding-inline: 0.8rem;
+        margin-bottom: 0.8rem;
+
+    }
+/* nav */
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 0.8rem; */
+    align-items: center;
+}
+
+nav ul{
+width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+
+}
+
+ul li a{
+    display: block;
+    background-color: #00f;
+    padding: 0.3rem  0.5rem;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+li a:hover{
+    background-color: gold;
+}
+/* main */
+main{
+    min-height: calc(100vh - 20%);
+    height: fit-content;
+    padding: 1rem;
+}
+
+section {
+    width: 100%;
+}
+section {
+    color: whitte;
+}
+
+section h4{
+    font-size: 1rem;
+    text-decoration: underline;
+}
+/* heri */
+.hero > div{
+width: 100%;
+overflow: hidden;
+}
+
+.hero img{
+    width: 100%;
+}
+    /* photos */
+    .img-container {
+      width: 100%;
+      max-height: 50%;
+      overflow: hidden;
+    }
+    .img-container img {
+      width: 100%;
+    }
+
+    /* Extra small devices */
+    @media (min-width: 576px) {
+      /* Styles for extra small devices */
+      nav{
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+
+      nav ul{
+        flex-direction: row;
+      }
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 768px) {
+      /* Styles for small devices */
+      :root{
+      --fontSize:20px;
+      /* background-color: red; */
+        
+      }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 992px) {
+      /* Styles for medium devices */
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 1200px) {
+      /* Styles for large devices */
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <!-- logo -->
+          <a href="/"
+            ><img src="./assets/images/beauty-logo.png" alt="my logo"
+          /></a>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h1>Super Gallery</h1>
+          <p>The mother of all gellieries!</p>
+        </div>
+      </header>
+      <main>
+        <!-- hero section -->
+        <section class="hero">
+          <div >
+            <img src="./assets/images/girl.png" alt="" />
+          </div>
+        </section>
+
+        <!-- gallery section -->
+        <section>
+          <h2>My Photo Album</h2>
+          <div class="photos">
+            <!-- Photo 1 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo1.jpg" alt="Photo 1" />
+              </div>
+              <div class="details">
+                <h4>January 1, 2023</h4>
+                <h5>New York City, USA</h5>
+                <p>A beautiful skyline view from Central Park.</p>
+              </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo2.jpg" alt="Photo 2" />
+              </div>
+              <div class="details">
+                <h4>March 15, 2023</h4>
+                <h5>Paris, France</h5>
+                <p>Exploring the Louvre Museum and its amazing architecture.</p>
+              </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo3.jpg" alt="Photo 3" />
+              </div>
+              <div class="details">
+                <h4>July 4, 2023</h4>
+                <h5>Sydney, Australia</h5>
+                <p>
+                  Celebrating New Year's Eve with fireworks over Sydney Harbour.
+                </p>
+              </div>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo4.jpg" alt="Photo 4" />
+              </div>
+              <div class="details">
+                <h4>September 22, 2023</h4>
+                <h5>Tokyo, Japan</h5>
+                <p>Visiting the traditional Meiji Shrine during autumn.</p>
+              </div>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo5.jpg" alt="Photo 5" />
+              </div>
+              <div class="details">
+                <h4>December 10, 2023</h4>
+                <h5>Rome, Italy</h5>
+                <p>Exploring the ancient ruins of the Colosseum.</p>
+              </div>
+            </div>
+
+            <!-- Continue with Photo 6 to Photo 20 following a similar structure -->
+
+            <!-- Photo 6 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo6.jpg" alt="Photo 6" />
+              </div>
+              <div class="details">
+                <h4>February 14, 2024</h4>
+                <h5>London, UK</h5>
+                <p>Enjoying a stroll along the River Thames on a sunny day.</p>
+              </div>
+            </div>
+
+            <!-- Photo 7 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo7.jpg" alt="Photo 7" />
+              </div>
+              <div class="details">
+                <h4>April 30, 2024</h4>
+                <h5>Barcelona, Spain</h5>
+                <p>
+                  Viewing the stunning Sagrada Família in the afternoon sun.
+                </p>
+              </div>
+            </div>
+
+            <!-- Photo 8 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo8.jpg" alt="Photo 8" />
+              </div>
+              <div class="details">
+                <h4>June 5, 2024</h4>
+                <h5>Amsterdam, Netherlands</h5>
+                <p>Biking through the picturesque streets of Amsterdam.</p>
+              </div>
+            </div>
+
+            <!-- Photo 9 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo9.jpg" alt="Photo 9" />
+              </div>
+              <div class="details">
+                <h4>August 18, 2024</h4>
+                <h5>Santorini, Greece</h5>
+                <p>
+                  Admiring the iconic white and blue architecture of Santorini.
+                </p>
+              </div>
+            </div>
+
+            <!-- Photo 10 -->
+            <div class="photo">
+              <div class="img-container">
+                <img src="/assets/gallery/photo10.jpg" alt="Photo 10" />
+              </div>
+              <div class="details">
+                <h4>October 20, 2024</h4>
+                <h5>Prague, Czech Republic</h5>
+                <p>
+                  Exploring the historic Prague Castle and its surroundings.
+                </p>
+              </div>
+            </div>
+
+            <!-- Continue this pattern up to Photo 20 -->
+          </div>
+        </section>
+      </main>
+      <footer>
+        <h3>&copy; supergallery.com 2024 All rigts Reserved</h3>
+      </footer>
+    </div>
+  </body>
+</html>
