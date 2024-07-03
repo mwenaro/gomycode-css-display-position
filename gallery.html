@@ -21,7 +21,7 @@
       --containerPadding: 5px;
 
       font-size: var(--fontSize);
-      background-color: #5e5e5e;
+      background-color: #e5e5e5;
       color: #000;
     }
     nav a {
@@ -106,17 +106,34 @@ main{
     height: fit-content;
     padding: 1rem;
 }
-
+/* section */
 section {
     width: 100%;
 }
-section {
-    color: whitte;
+
+section h2{
+  padding: 0.4rem;
+  margin:1rem 0;
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.details{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap:0.3rem;
 }
 
-section h4{
-    font-size: 1rem;
-    text-decoration: underline;
+.details h4{
+    font-size: 1.3rem;
+    /* text-decoration: underline; */
+}
+.details h5{
+  font-size: 1rem;
+}
+.details p{
+  font-size: .9rem;
 }
 /* heri */
 .hero > div{
@@ -128,27 +145,58 @@ overflow: hidden;
     width: 100%;
 }
     /* photos */
-    .img-container {
+
+    .photos{
       width: 100%;
-      max-height: 50%;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap:0.2rem;
+    }
+.photo {
+  
+  /* border:3px solid red; ; */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.9); /* Box shadow definition */
+}
+
+  .photo .img-container {
+      width: 100%;
+      /* max-height: 50%; */
       overflow: hidden;
+      transition: transform 0.3s ease; 
+    }
+
+    .photo .img-container:hover {
+      transform: scale(1.5); /* Scale up the image by 10% on hover */
     }
     .img-container img {
       width: 100%;
     }
 
+    /* .img-container img:hover {
+      
+    } */
+
+    /* 300px
+    @media (min-width:280px) {
+      
+    } */
+
     /* Extra small devices */
     @media (min-width: 576px) {
       /* Styles for extra small devices */
-      nav{
+      /* nav */
+      nav {
         flex-direction: row;
-        justify-content: space-between;
       }
-
 
       nav ul{
         flex-direction: row;
+        width: fit-content;
+        padding-right: 1rem;
       }
+     
     }
 
     /* Small devices (landscape phones, 576px and up) */
@@ -164,11 +212,30 @@ overflow: hidden;
     /* Medium devices (tablets, 768px and up) */
     @media (min-width: 992px) {
       /* Styles for medium devices */
+
+
+      /* photos */
+
+      .photo .img-container{
+        max-height: 60%;
+      }
+      .photos{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+
+      }
+
     }
 
     /* Large devices (desktops, 992px and up) */
     @media (min-width: 1200px) {
       /* Styles for large devices */
+
+       /* photos */
+       .photos{
+      grid-template-columns: repeat(3, 1fr);
+
+      }
     }
   </style>
   <body>
